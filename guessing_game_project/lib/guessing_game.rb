@@ -21,10 +21,16 @@ class GuessingGame
             p "You win"
         elsif num > @secret_num
             p "too big"
-            p "-----------"
+          
         else
             p "too small"
-            p "-----------"
+
         end
+    end
+
+    def ask_user
+        puts "Enter a number"
+        user_input = gets.chomp.to_i
+        check_num(user_input)
     end
 end
